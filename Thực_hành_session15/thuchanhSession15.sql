@@ -110,10 +110,6 @@ BEGIN
     FROM students
     WHERE student_id = p_student_id;
     
-    UPDATE students
-	SET total_debt = total_debt - p_total_debt
-	WHERE student_id = p_student_id;
-    
     
     IF v_total_debt - p_total_debt < 0 THEN 
 		ROLLBACK;
